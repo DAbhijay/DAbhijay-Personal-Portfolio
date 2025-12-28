@@ -1,0 +1,140 @@
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #e5e7eb;
+  background-color: #0f1115;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Variables */
+
+:root {
+  --max-width: 1100px;
+  --spacing: 1rem;
+
+  --color-primary: #f1f5f9;
+  --color-secondary: #9ca3af;
+  --color-accent: #242020;
+  --color-project-link: #60a5fa;
+  --color-neon: #3b82f6;
+
+  --border-radius: 6px;
+}
+
+
+/* Global Layout */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+/* Header CSS */
+
+.site-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-primary);;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.main-nac a[aria-current="page"] {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+
+/* Social Links CSS */
+
+.social-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+}
+.social-links img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+.social-links a:hover img {
+  opacity: 0.75;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-secondary);
+
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
