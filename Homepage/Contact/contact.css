@@ -218,7 +218,10 @@ section {
 }
 
 .contact-list a {
-  color: #93c5fd;
+  color: var(--color-project-link);
+}
+
+.contact-list a:hover {
   text-decoration: underline;
 }
 
