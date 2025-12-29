@@ -218,7 +218,8 @@ section {
 }
 
 .contact-list a {
-  color: var(--color-project-link);
+  color: #93c5fd;
+  text-decoration: underline;
 }
 
 /* =======================
