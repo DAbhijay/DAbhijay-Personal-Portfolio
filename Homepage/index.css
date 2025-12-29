@@ -1,5 +1,7 @@
 
-/* CSS RESET */
+/* =======================
+    CSS Reset
+======================= */
 
 *,
 *::before,
@@ -20,7 +22,9 @@ img {
   display: block;
 }
 
-/* Variables */
+/* =======================
+    Variables
+======================= */
 
 :root {
   --max-width: 1100px;
@@ -41,7 +45,9 @@ img {
 }
 
 
-/* Global Layout */
+/* =======================
+    Global Layout
+======================= */
 
 .container {
   max-width: var(--max-width);
@@ -53,7 +59,9 @@ section {
   padding: 4rem 0;
 }
 
-/* Header CSS */
+/* =======================
+    Header CSS
+======================= */
 
 .site-header {
   border-bottom: 1px solid #e5e5e5;
@@ -90,7 +98,9 @@ section {
   color: var(--color-primary);
 }
 
-/* HERO */
+/* =======================
+    Hero CSS
+======================= */
 
 .hero {
   padding: 6rem 0;
@@ -111,7 +121,9 @@ section {
   margin: 1rem 0 2rem;
 }
 
-/* Buttons */
+/* =======================
+    Buttons CSS
+======================= */
 
 .btn {
   display: inline-block;
@@ -210,7 +222,9 @@ section {
   100% { background-position: 0% 50%; }
 }
 
-/* Projects */
+/* =======================
+    Projects CSS
+======================= */
 
 .project-grid {
   display: grid;
@@ -238,7 +252,9 @@ section {
   color: var(--color-project-link);
 }
 
-/* Contact Section */
+/* =======================
+    Contact CSS
+======================= */
 
 .cta {
   background-color: #f9fafb;
@@ -250,7 +266,9 @@ section {
   );
 }
 
-/* Footer CSS */
+/* =======================
+    Footer CSS
+======================= */
 
 .site-footer {
   border-top: 1px solid #e5e5e5;
@@ -271,7 +289,9 @@ section {
 }
 
 
-/* Social Links CSS */
+/* =======================
+    Social Link CSS
+======================= */
 
 .social-links {
   list-style: none;
