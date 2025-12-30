@@ -239,6 +239,11 @@ section {
   border-radius: var(--border-radius)
 }
 
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 .project-tech {
   font-size: 0.9rem;
   color: var(--color-secondary);
