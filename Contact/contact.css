@@ -1,6 +1,5 @@
-
 /* =======================
-    CSS Reset
+   CSS RESET
 ======================= */
 
 *,
@@ -22,8 +21,9 @@ img {
   display: block;
 }
 
+
 /* =======================
-    Variables CSS
+   VARIABLES
 ======================= */
 
 :root {
@@ -33,7 +33,7 @@ img {
   --color-primary: #f1f5f9;
   --color-secondary: #9ca3af;
   --color-accent: #242020;
-  --color-project-link: #60a5fa;
+  --color-link: #93c5fd;
   --color-neon: #3b82f6;
 
   --border-radius: 6px;
@@ -41,7 +41,7 @@ img {
 
 
 /* =======================
-    Global Layout CSS
+   GLOBAL LAYOUT
 ======================= */
 
 .container {
@@ -54,12 +54,13 @@ section {
   padding: 4rem 0;
 }
 
+
 /* =======================
-    Header CSS
+   HEADER
 ======================= */
 
 .site-header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header-inner {
@@ -72,7 +73,7 @@ section {
 .logo {
   font-weight: 700;
   text-decoration: none;
-  color: var(--color-primary);;
+  color: var(--color-primary);
 }
 
 .main-nav ul {
@@ -88,17 +89,18 @@ section {
   color: var(--color-secondary);
 }
 
-.main-nac a[aria-current="page"] {
+.main-nav a[aria-current="page"] {
   font-weight: 600;
   color: var(--color-primary);
 }
 
+
 /* =======================
-    Footer CSS
+   FOOTER
 ======================= */
 
 .site-footer {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2rem 0;
 }
 
@@ -117,7 +119,7 @@ section {
 
 
 /* =======================
-    Social Links CSS
+   SOCIAL LINKS
 ======================= */
 
 .social-links {
@@ -128,36 +130,32 @@ section {
   padding: 0;
   margin: 0;
 }
-.social-links img {
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-.social-links a:hover img {
-  opacity: 0.75;
-}
+
 .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 40px;
   height: 40px;
-
   border-radius: 8px;
   text-decoration: none;
-  color: var(--color-secondary);
-
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.social-links img {
+  width: 28px;
+  height: 28px;
+}
+
 
 /* =======================
    CONTACT PAGE BASE
 ======================= */
-
-.contact-page section {
-  padding: 4rem 0;
-}
 
 .contact-page section + section {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -165,25 +163,26 @@ section {
 
 
 /* =======================
-   INTRO SECTION
+   CONTACT INTRO
 ======================= */
 
 .contact-intro h1 {
   font-size: clamp(2.2rem, 4vw, 2.8rem);
   margin-bottom: 1rem;
   color: var(--color-primary);
+  letter-spacing: -0.02em;
 }
 
 .contact-intro p {
   max-width: 720px;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: var(--color-secondary);
+  color: #b6c0ce;
 }
 
 
 /* =======================
-   CONTACT INFO SECTION
+   CONTACT INFO
 ======================= */
 
 .contact-info h2 {
@@ -203,7 +202,6 @@ section {
   opacity: 0.6;
 }
 
-/* Layout: links + envelope */
 .contact-content {
   display: flex;
   align-items: center;
@@ -212,7 +210,9 @@ section {
   flex-wrap: wrap;
 }
 
-/* Contact links */
+
+/* Contact list */
+
 .contact-list {
   list-style: none;
   padding: 0;
@@ -220,17 +220,19 @@ section {
 }
 
 .contact-list li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
   font-size: 0.95rem;
   color: var(--color-secondary);
 }
 
 .contact-list strong {
+  display: inline-block;
+  min-width: 80px;
   color: var(--color-primary);
 }
 
 .contact-list a {
-  color: #93c5fd;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -241,141 +243,62 @@ section {
 
 
 /* =======================
-   ENVELOPE (MAIL CTA)
+   MICRO-INTERACTION CTA
 ======================= */
 
-.contact-mail {
+.contact-cta {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.cta-mail {
+  display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+
+  border: 1px solid rgba(59, 130, 246, 0.35);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
 
-/* Envelope container */
-.letter-image {
-  position: relative;
-  width: 200px;
-  height: 130px;
-  cursor: pointer;
+.cta-icon {
+  font-size: 1.1rem;
+  color: var(--color-neon);
 }
 
-/* Wrapper */
-.animated-mail {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.cta-mail:hover {
+  transform: translateY(-2px);
+  background: rgba(59, 130, 246, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.4),
+    0 8px 20px rgba(59, 130, 246, 0.15);
 }
 
-/* Back of envelope */
-.back-fold {
-  position: absolute;
-  inset: 0;
-  background: #1e293b;
-  border-radius: 6px;
-  z-index: 0;
+.cta-mail:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-neon),
+    0 8px 20px rgba(59, 130, 246, 0.2);
 }
-
-/* Bottom flap */
-.body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 65px solid #020617;
-  z-index: 2;
-}
-
-/* Left flap */
-.left-fold {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 65px solid transparent;
-  border-right: 100px solid #0f172a;
-  z-index: 2;
-}
-
-/* Top flap */
-.top-fold {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 65px solid #334155;
-  transform-origin: top center;
-  transition: transform 0.35s ease;
-  z-index: 3;
-}
-
-/* Letter */
-.letter {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  width: 160px;
-  height: 50px;
-  background: #f8fafc;
-  z-index: 1;
-  overflow: hidden;
-  transition: height 0.35s ease;
-  border-radius: 3px;
-}
-
-/* Letter details */
-.letter-border {
-  height: 8px;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--color-neon),
-    var(--color-neon) 8px,
-    transparent 8px,
-    transparent 16px
-  );
-}
-
-.letter-title {
-  width: 40%;
-  height: 8px;
-  background: #e5e7eb;
-  margin: 8px;
-}
-
-.letter-context {
-  width: 20%;
-  height: 8px;
-  background: #e5e7eb;
-  margin: 8px;
-}
-
-/* Hover interaction */
-.letter-image:hover .letter {
-  height: 100px;
-}
-
-.letter-image:hover .top-fold {
-  transform: rotateX(180deg);
-}
-
-/* Caption */
-.mail-caption {
-  font-size: 0.85rem;
-  color: var(--color-secondary);
-  opacity: 0.8;
-}
-
 
 
 /* =======================
-   CONTACT FORM SECTION
+   CONTACT FORM
 ======================= */
+
+.contact-form {
+  max-width: 640px;
+}
 
 .contact-form h2 {
   font-size: 1.4rem;
@@ -383,20 +306,17 @@ section {
   color: var(--color-primary);
 }
 
-.contact-form form {
-  max-width: 600px;
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   font-size: 0.9rem;
   margin-bottom: 0.25rem;
   color: var(--color-secondary);
+  font-weight: 500;
 }
 
 .form-group input,
@@ -426,9 +346,5 @@ section {
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
-  }
-
-  .contact-mail {
-    align-self: center;
   }
 }
