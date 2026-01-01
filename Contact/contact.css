@@ -251,16 +251,16 @@ section {
   gap: 0.75rem;
 }
 
-/* Envelope container */
+/* Container */
 .letter-image {
   position: relative;
   width: 200px;
-  height: 150px;
+  height: 130px;
   overflow: hidden;
   cursor: pointer;
 }
 
-/* Base animation wrapper */
+/* Animation wrapper */
 .animated-mail {
   position: absolute;
   width: 100%;
@@ -269,15 +269,15 @@ section {
 }
 
 .letter-image:hover .animated-mail {
-  transform: translateY(20px);
+  transform: translateY(18px);
 }
 
-/* Back of envelope */
+/* Back panel */
 .back-fold {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 90px;
   background: #1e293b;
   z-index: 0;
 }
@@ -288,7 +288,7 @@ section {
   left: 20px;
   bottom: 0;
   width: 160px;
-  height: 60px;
+  height: 55px;
   background: #f8fafc;
   overflow: hidden;
   z-index: 1;
@@ -296,12 +296,12 @@ section {
 }
 
 .letter-image:hover .letter {
-  height: 140px;
+  height: 115px;
 }
 
-/* Letter details */
+/* Letter content */
 .letter-border {
-  height: 10px;
+  height: 8px;
   background: repeating-linear-gradient(
     -45deg,
     var(--color-neon),
@@ -313,36 +313,16 @@ section {
 
 .letter-title {
   width: 40%;
-  height: 10px;
+  height: 8px;
   background: #e5e7eb;
-  margin: 10px;
+  margin: 8px;
 }
 
 .letter-context {
   width: 20%;
-  height: 10px;
+  height: 8px;
   background: #e5e7eb;
-  margin: 10px;
-}
-
-/* Stamp */
-.letter-stamp {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--color-neon);
-  opacity: 0.7;
-}
-
-.letter-stamp-inner {
-  width: 20px;
-  height: 20px;
-  background: #2563eb;
-  border-radius: 50%;
-  margin: 5px;
+  margin: 8px;
 }
 
 /* Bottom flap */
@@ -353,7 +333,7 @@ section {
   height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-top: 50px solid #020617;
+  border-top: 45px solid #020617;
   z-index: 2;
 }
 
@@ -363,8 +343,8 @@ section {
   bottom: 0;
   width: 0;
   height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
   border-right: 100px solid #0f172a;
   z-index: 2;
 }
@@ -372,12 +352,12 @@ section {
 /* Top flap */
 .top-fold {
   position: absolute;
-  top: 50px;
+  top: 45px;
   width: 0;
   height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 50px solid #334155;
+  border-bottom: 45px solid #334155;
   transform-origin: 50% 0%;
   transition: transform 0.4s ease;
   z-index: 3;
@@ -393,7 +373,6 @@ section {
   color: var(--color-secondary);
   opacity: 0.8;
 }
-
 
 
 /* =======================
