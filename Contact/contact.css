@@ -332,6 +332,36 @@ section {
   transition: width 0.4s ease;
 }
 
+/* =======================
+   Contact Form CSS
+======================= */
+
+.contact-form {
+  margin-top: 4rem;
+}
+
+.contact-form h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.contact-form form {
+  max-width: 600px;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
 
 /* =======================
    Mobile Polish
