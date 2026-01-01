@@ -298,6 +298,7 @@ section {
 
 .contact-form {
   max-width: 640px;
+  margin: 0 auto;
 }
 
 .contact-form h2 {
