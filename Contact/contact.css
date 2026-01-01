@@ -305,6 +305,7 @@ section {
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
   color: var(--color-primary);
+  text-align: center;
 }
 
 .form-group {
