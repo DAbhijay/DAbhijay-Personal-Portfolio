@@ -152,19 +152,97 @@ section {
 }
 
 /* =======================
-   Contact Layout CSS
+   CONTACT PAGE BASE
 ======================= */
 
+.contact-page section {
+  padding: 4rem 0;
+}
+
+.contact-page section + section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =======================
+   INTRO SECTION
+======================= */
+
+.contact-intro h1 {
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.contact-intro p {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-secondary);
+}
+
+
+/* =======================
+   CONTACT INFO SECTION
+======================= */
+
+.contact-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  position: relative;
+}
+
+.contact-info h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin-top: 0.5rem;
+  background-color: var(--color-neon);
+  opacity: 0.6;
+}
+
+/* Layout: links + envelope */
 .contact-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 4rem;
   flex-wrap: wrap;
 }
 
+/* Contact links */
 .contact-list {
-  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.contact-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+}
+
+.contact-list strong {
+  color: var(--color-primary);
+}
+
+.contact-list a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: var(--color-neon);
+  text-decoration: underline;
+}
+
+
+/* =======================
+   ENVELOPE (MAIL CTA)
+======================= */
 
 .contact-mail {
   display: flex;
@@ -173,38 +251,25 @@ section {
   gap: 0.75rem;
 }
 
-.mail-caption {
-  font-size: 0.85rem;
-  color: var(--color-secondary);
-  opacity: 0.8;
-}
-
-
-/* =======================
-   Envelope Animation
-======================= */
-
+/* Clickable area */
 .letter-image {
   position: relative;
   width: 180px;
-  height: 130px;
-
+  height: 120px;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 12px;
 }
 
-
+/* Envelope container */
 .animated-mail {
   position: absolute;
-  width: 180px;
-  height: 130px;
+  width: 100%;
+  height: 100%;
   transition: transform 0.4s ease;
 }
 
-
+/* Hover animation */
 .letter-image:hover .animated-mail {
-  transform: translateY(15px);
+  transform: translateY(12px);
 }
 
 .letter-image:hover .top-fold {
@@ -213,20 +278,25 @@ section {
 }
 
 .letter-image:hover .letter {
-  height: 160px;
+  height: 150px;
 }
 
-.letter-image:hover .shadow {
-  width: 220px;
+/* Envelope colors (dark theme friendly) */
+.back-fold {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #1f2933;
+  z-index: 0;
 }
-
 
 .body {
   position: absolute;
   bottom: 0;
   border-style: solid;
-  border-width: 0 0 90px 180px;
-  border-color: transparent transparent var(--color-accent) transparent;
+  border-width: 0 0 70px 180px;
+  border-color: transparent transparent #111827 transparent;
   z-index: 2;
 }
 
@@ -234,46 +304,37 @@ section {
   position: absolute;
   bottom: 0;
   border-style: solid;
-  border-width: 45px 0 45px 90px;
-  border-color: transparent transparent transparent #1a1717;
+  border-width: 35px 0 35px 90px;
+  border-color: transparent transparent transparent #0f172a;
   z-index: 2;
 }
 
-.back-fold {
-  position: absolute;
-  bottom: 0;
-  width: 180px;
-  height: 90px;
-  background: #1f1f1f;
-  z-index: 0;
-}
-
-
 .top-fold {
   position: absolute;
-  top: 45px;
+  top: 35px;
   border-style: solid;
-  border-width: 45px 90px 0 90px;
-  border-color: #2a2a2a transparent transparent transparent;
+  border-width: 35px 90px 0 90px;
+  border-color: #1e293b transparent transparent transparent;
   transform-origin: 50% 0%;
   transition: transform 0.4s ease;
   z-index: 2;
 }
 
-
+/* Letter */
 .letter {
   position: absolute;
   left: 15px;
   bottom: 0;
   width: 150px;
-  height: 55px;
-  background: #ffffff;
+  height: 48px;
+  background: #f8fafc;
   overflow: hidden;
   transition: height 0.4s ease;
   z-index: 1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
-
+/* Letter details */
 .letter-border {
   height: 8px;
   background: repeating-linear-gradient(
@@ -300,11 +361,11 @@ section {
   width: 20%;
 }
 
-
+/* Stamp */
 .letter-stamp {
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 8px;
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -320,25 +381,17 @@ section {
   margin: 5px;
 }
 
-.shadow {
-  position: absolute;
-  top: 140px;
-  left: 50%;
-  width: 180px;
-  height: 18px;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  transition: width 0.4s ease;
+/* Caption */
+.mail-caption {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  opacity: 0.8;
 }
+
 
 /* =======================
-   Contact Form CSS
+   CONTACT FORM SECTION
 ======================= */
-
-.contact-form {
-  margin-top: 4rem;
-}
 
 .contact-form h2 {
   font-size: 1.4rem;
@@ -350,30 +403,48 @@ section {
   max-width: 600px;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-secondary);
+}
+
 .form-group input,
 .form-group textarea {
-  background-color: rgba(255, 255, 255, 0.04);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--color-primary);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: inherit;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  background-color: rgba(255, 255, 255, 0.06);
+  outline: none;
+  border-color: var(--color-neon);
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4);
 }
 
 
 /* =======================
-   Mobile Polish
+   RESPONSIVE
 ======================= */
 
 @media (max-width: 700px) {
   .contact-content {
     flex-direction: column;
+    align-items: flex-start;
     gap: 3rem;
   }
 
   .contact-mail {
-    transform: scale(0.9);
+    align-self: center;
   }
 }
