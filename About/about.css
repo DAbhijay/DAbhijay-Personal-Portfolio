@@ -194,6 +194,24 @@ section {
     opacity: 0.6;
 }
 
+.about-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-profile-image {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =======================
+    Skills List
+======================= */
+
 .skills-list {
     list-style: none;
     padding: 0;
@@ -229,4 +247,22 @@ section {
     .about-intro h1{
         font-size: 2rem;
     }
+
+    .about-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =======================
+    Images
+======================= */
+
+.profile-image,
+.about-profile-image {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.08);
 }

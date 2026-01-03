@@ -121,6 +121,19 @@ section {
   margin: 1rem 0 2rem;
 }
 
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-image img {
+  width: 180px;
+  border-radius: 50%;
+}
+
+
 /* =======================
     Buttons CSS
 ======================= */
@@ -327,4 +340,17 @@ section {
   color: var(--color-secondary);
 
   transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* =======================
+       Images
+======================= */
+
+.profile-image,
+.about-profile-image {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.08);
 }
