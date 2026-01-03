@@ -200,6 +200,46 @@ section {
   gap: 3rem;
 }
 
+/* =======================
+   Resume Section
+======================= */
+
+.about-resume {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.resume-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.resume-text p {
+  max-width: 500px;
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.resume-preview iframe {
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0b0d12;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .resume-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-preview iframe {
+    height: 360px;
+  }
+}
+
 
 /* =======================
     Skills List
