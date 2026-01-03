@@ -267,3 +267,39 @@ section {
 
   border: 2px solid rgba(255, 255, 255, 0.08);
 }
+
+/* =======================
+   Certificates Section
+======================= */
+
+.certificates-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.75rem;
+}
+
+.certificates-list li {
+    padding: 0.85rem 1.1rem;
+    border-radius: var(--border-radius);
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    font-size: 0.95rem;
+    color: var(--color-secondary);
+}
+
+.certificate-title {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.certificate-issuer {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+}
+
