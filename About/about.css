@@ -200,13 +200,6 @@ section {
   gap: 3rem;
 }
 
-.about-profile-image {
-  width: 220px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.08);
-}
 
 /* =======================
     Skills List
@@ -258,11 +251,19 @@ section {
     Images
 ======================= */
 
-.profile-image,
+.about-image {
+  flex-shrink: 0;
+}
+
 .about-profile-image {
-  width: 180px;
-  aspect-ratio: 1 / 1;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
+
+  display: block;
+  position: relative;
+  z-index: 1;
+
   border: 2px solid rgba(255, 255, 255, 0.08);
 }
