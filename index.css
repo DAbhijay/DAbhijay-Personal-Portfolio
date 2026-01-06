@@ -118,12 +118,6 @@ section {
   color: var(--color-secondary);
 }
 
-.hero-tagline {
-  max-width: 420px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--color-secondary);
-}
 
 .profile-image {
   width: 180px;
@@ -131,6 +125,7 @@ section {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.35);
 }
 
 
@@ -151,7 +146,15 @@ section {
   gap: 4rem;
 }
 
-.hero-image,
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+
 .hero-image::before,
 .hero-image::after {
   background: none;
