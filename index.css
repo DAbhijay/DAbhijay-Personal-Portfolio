@@ -133,6 +133,7 @@ section {
 .hero-image::after {
   background: none;
   content: none;
+  justify-content: center;
 }
 
 
