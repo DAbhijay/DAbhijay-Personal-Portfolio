@@ -111,6 +111,29 @@ section {
   );
 }
 
+.hero-tagline {
+  max-width: 420px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+.hero-tagline {
+  max-width: 420px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+.profile-image {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+
 .hero-title {
   font-size: 1.5rem;
   color: var(--color-secondary);
