@@ -333,6 +333,17 @@ section {
   height: 28px;
   display: block;
 }
+
+.social-links img[alt="GitHub"] {
+  filter: invert(1) brightness(1.2);
+}
+
+.social-links img[alt="GitHub"]:hover {
+  filter: invert(1) brightness(1.4);
+  transform: scale(1.05);
+}
+
+
 .social-links a:hover img {
   opacity: 0.75;
 }
