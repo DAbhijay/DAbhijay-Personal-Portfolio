@@ -296,6 +296,7 @@ section {
 
 /* Card */
 .project-card {
+  position: relative;
   padding: 1.75rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
@@ -333,12 +334,54 @@ section {
   color: var(--color-primary);
 }
 
-.project-badge {
+/* =======================
+   Status Badges
+======================= */
+
+.status-badge {
   font-size: 0.7rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  background: rgba(59, 130, 246, 0.15);
-  color: var(--color-neon);
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  backdrop-filter: blur(6px);
+  white-space: nowrap;
+}
+
+/* Planned */
+.status-planned {
+  color: #5da9ff;
+  border-color: rgba(93, 169, 255, 0.35);
+  box-shadow: 0 0 8px rgba(93, 169, 255, 0.15);
+}
+
+/* In Progress */
+.status-progress {
+  color: #facc15;
+  border-color: rgba(250, 204, 21, 0.35);
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.15);
+}
+
+/* Completed */
+.status-completed {
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.35);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.15);
+}
+
+/* Refactoring (Optional) */
+.status-refactor {
+  color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.35);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.15);
+}
+
+/* Enhance badge glow on card hover */
+.project-card:hover .status-badge {
+  box-shadow: 0 0 12px currentColor;
 }
 
 /* Description */
@@ -378,6 +421,7 @@ section {
 .project-link:hover {
   text-decoration: underline;
 }
+
 
 
 /* =======================

@@ -163,7 +163,7 @@ section {
 }
 
 /* =======================
-    Projects Page CSS
+   Projects Page CSS
 ======================= */
 
 .projects-page section {
@@ -175,7 +175,7 @@ section {
 }
 
 /* =======================
-    Intro Section CSS
+   Intro Section CSS
 ======================= */
 
 .projects-intro h1 {
@@ -192,9 +192,8 @@ section {
 }
 
 /* =======================
-    Projects Grid
+   Projects Grid
 ======================= */
-
 
 .projects-list .container {
   display: grid;
@@ -203,31 +202,98 @@ section {
 }
 
 /* =======================
-    Project Card CSS
+   Project Card CSS
 ======================= */
 
 .project-card {
+  position: relative;
   padding: 1.75rem;
   border-radius: var(--border-radius);
   background: rgba(255, 255, 255, 0.03);
-  border: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.2),
+    0 14px 30px rgba(0, 0, 0, 0.55);
 }
 
+/* Header */
 .project-card h2 {
   font-size: 1.25rem;
   color: var(--color-primary);
 }
+
+/* =======================
+   Status Badges
+======================= */
+
+.status-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  backdrop-filter: blur(6px);
+  white-space: nowrap;
+}
+
+/* Planned */
+.status-planned {
+  color: #5da9ff;
+  border-color: rgba(93, 169, 255, 0.35);
+  box-shadow: 0 0 8px rgba(93, 169, 255, 0.15);
+}
+
+/* In Progress */
+.status-progress {
+  color: #facc15;
+  border-color: rgba(250, 204, 21, 0.35);
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.15);
+}
+
+/* Completed */
+.status-completed {
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.35);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.15);
+}
+
+/* Refactoring */
+.status-refactor {
+  color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.35);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.15);
+}
+
+/* Badge reacts subtly on hover */
+.project-card:hover .status-badge {
+  box-shadow: 0 0 12px currentColor;
+}
+
+/* =======================
+   Project Description
+======================= */
 
 .project-description {
   font-size: 0.95rem;
@@ -236,7 +302,7 @@ section {
 }
 
 /* =======================
-    Tech Stack List
+   Tech Stack List
 ======================= */
 
 .project-tech {
@@ -245,7 +311,7 @@ section {
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0;
-  margin: 0.5rem 0, 0;
+  margin: 0.5rem 0 0;
 }
 
 .project-tech li {
@@ -257,7 +323,7 @@ section {
 }
 
 /* =======================
-    Project Links CSS
+   Project Links CSS
 ======================= */
 
 .project-links {
@@ -275,7 +341,7 @@ section {
 }
 
 .project-links a::after {
-  content:"";
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -287,8 +353,9 @@ section {
 }
 
 .project-links a:hover::after {
-  opacity: 1;;
+  opacity: 1;
 }
+
 
 /* =======================
     CTA Section
