@@ -1,141 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> Contact | D. Abhijay </title>
-        <link rel="stylesheet" href="contact.css" />
-    </head>
-    <body>
-        
-        <!--Header-->
-        <header class="site-header">
-            <div class="container header-inner">
-                <a href="../index.html" class="logo"> D. Abhijay </a>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../About/about.html">About</a></li>
-                        <li><a href="../Projects/projects.html">Projects</a></li>
-                        <li><a href="../Contact/contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | D. Abhijay</title>
+  <meta name="description" content="Get in touch with D. Abhijay for collaboration, opportunities, or to discuss DevOps and web development"/>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">D. Abhijay</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../About/about.html">About</a></li>
+          <li><a href="../Projects/projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="badge-icon">✉️</span>
+          <span>Get in Touch</span>
+        </div>
+
+        <h1>Let's <span class="gradient-text">Connect</span></h1>
+
+        <p class="hero-description">
+          Whether you have a project in mind, an opportunity to discuss, or just want to chat about
+          development and DevOps practices—I'd love to hear from you. Open to internships, junior
+          developer roles, and collaboration opportunities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+      <div class="container">
+        <h2 class="section-title">Ways to Reach Me</h2>
+
+        <div class="contact-grid">
+
+          <article class="contact-card">
+            <div class="contact-icon">
+              <span>📧</span>
+            </div>
+            <h3>Email</h3>
+            <p class="contact-description">
+              Best for detailed discussions and formal inquiries
+            </p>
+            <a href="mailto:d.abhijay0808@gmail.com" class="contact-link">
+              d.abhijay0808@gmail.com
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">
+              <span>💼</span>
+            </div>
+            <h3>LinkedIn</h3>
+            <p class="contact-description">
+              Connect professionally and view my work history
+            </p>
+            <a href="https://www.linkedin.com/in/d-abhijay-22763a383/" target="_blank" rel="noopener" class="contact-link">
+              linkedin.com/in/d-abhijay
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">
+              <span>👨‍💻</span>
+            </div>
+            <h3>GitHub</h3>
+            <p class="contact-description">
+              Explore my code and open-source contributions
+            </p>
+            <a href="https://github.com/DAbhijay" target="_blank" rel="noopener" class="contact-link">
+              github.com/DAbhijay
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Contact CTA -->
+    <section class="quick-contact alt-bg">
+      <div class="container">
+        <div class="quick-contact-content">
+          <div class="quick-contact-text">
+            <h2>Ready to Start a Conversation?</h2>
+            <p>
+              Send me an email and I'll get back to you as soon as possible.
+              I typically respond within 24-48 hours.
+            </p>
+          </div>
+          <a href="mailto:d.abhijay0808@gmail.com" class="btn btn-primary btn-large">
+            <span class="btn-icon">✉</span>
+            <span>Send Email</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <div class="container">
+        <h2 class="section-title">Send a Message</h2>
+        <p class="section-subtitle">
+          Fill out the form below and I'll get back to you soon
+        </p>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">
+                Name <span class="required">*</span>
+              </label>
+              <input 
+                id="name" 
+                name="name" 
+                type="text" 
+                placeholder="Your name"
+                required 
+                autocomplete="name"
+              />
             </div>
 
-            
-        </header>
-
-        <!--Main-->
-        <main class="contact-page">
-            
-
-            <!--Contact Intro-->
-            <section class="contact-intro">
-                <div class="container">
-                    <h1> Contact Me </h1>
-                    <p>
-                        If you have a question, oppurtunity, or just want to say hello?
-                        Feel free to reach out.
-                    </p>
-                </div>
-            </section>
-
-            <!--Contact Info-->
-
-            <section class="contact-info">
-                <div class="container">
-                    <h2>Get in Touch</h2>
-
-                    <div class="contact-content">
-                    <ul class="contact-list">
-                        <li>
-                        <strong>Email:</strong>
-                        <a href="mailto:d.abhijay0808@gmail.com">
-                            d.abhijay0808@gmail.com
-                        </a>
-                        </li>
-                        <li>
-                        <strong>GitHub:</strong>
-                        <a href="https://github.com/DAbhijay" target="_blank" rel="noopener">
-                            github.com/DAbhijay
-                        </a>
-                        </li>
-                        <li>
-                        <strong>LinkedIn:</strong>
-                        <a href="https://www.linkedin.com/in/d-abhijay-22763a383/" target="_blank" rel="noopener">
-                            linkedin.com/in/d-abhijay
-                        </a>
-                        </li>
-                    </ul>
-
-                    <!-- Micro-interaction CTA -->
-                    <div class="contact-cta">
-                        <a href="mailto:d.abhijay0808@gmail.com" class="cta-mail">
-                        <span class="cta-icon">✉</span>
-                        <span class="cta-text">Send me a message</span>
-                        </a>
-                    </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!--Contact Form-->
-            
-            <section class="contact-form">
-                <div class="container">
-                    <h2> Send a Message </h2>
-
-                    <form action="#" method="post" novalidate>
-                        <div class="form-group">
-                            <label for="name"> Name: </label>
-                            <input id="name" name="name" type="text" required autocomplete="name"/>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email"> Email: </label>
-                            <input id="email" name="email" type="email" required autocomplete="email"/>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message"> Message: </label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary"> Send Message </button>
-
-                    </form>
-                </div>
-            </section>
-
-
-        </main>
-
-        <!--Footer-->
-
-        <footer class="site-footer">
-            <div class="container footer-inner">
-                <p>© 2025 D. Abhijay. All rights reserved.</p>
-
-                <div class="footer-social">
-                    <span class="social-label"> Social Links: </span>
-
-                    <ul class="social-links">
-                    <li>
-                        <a href="https://github.com/DAbhijay" target="_blank" aria-label="GitHub">
-                            <img src="../images/github-icon.svg" alt="GitHub">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/d-abhijay-22763a383/" target="_blank" aria-label="LinkedIn">
-                            <img src="../images/LinkedIn_icon.svg.png" alt="LinkedIn">
-                        </a>
-                    </li>
-                </ul>
-                </div>
+            <div class="form-group">
+              <label for="email">
+                Email <span class="required">*</span>
+              </label>
+              <input 
+                id="email" 
+                name="email" 
+                type="email" 
+                placeholder="your@email.com"
+                required 
+                autocomplete="email"
+              />
             </div>
-        </footer>
-        
+          </div>
 
-    </body>
+          <div class="form-group">
+            <label for="subject">
+              Subject <span class="required">*</span>
+            </label>
+            <input 
+              id="subject" 
+              name="subject" 
+              type="text" 
+              placeholder="What's this about?"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              Message <span class="required">*</span>
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="6" 
+              placeholder="Tell me about your project or inquiry..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <span>Send Message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- Availability Info -->
+    <section class="availability-section alt-bg">
+      <div class="container">
+        <div class="availability-content">
+          <div class="availability-badge">
+            <span class="status-dot"></span>
+            <span>Currently Available</span>
+          </div>
+          
+          <h2>Open to Opportunities</h2>
+          
+          <p>
+            I'm actively seeking internship or junior developer positions where I can contribute
+            to building scalable systems and continue learning DevOps practices. Interested in
+            both full-time and contract work.
+          </p>
+
+          <div class="interests-list">
+            <div class="interest-item">
+              <span class="interest-icon">💻</span>
+              <span>Full-Stack Development</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🚀</span>
+              <span>DevOps Engineering</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">☁️</span>
+              <span>Cloud Infrastructure</span>
+            </div>
+            <div class="interest-item">
+              <span class="interest-icon">🔧</span>
+              <span>Backend Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-brand">D. Abhijay</p>
+        <p class="footer-tagline">Building for the web, deploying for scale</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="../About/about.html">About</a>
+        <a href="../Projects/projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com/DAbhijay" target="_blank" aria-label="GitHub" class="social-link">
+          <img src="../images/github-icon.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/d-abhijay-22763a383/" target="_blank" aria-label="LinkedIn" class="social-link">
+          <img src="../images/LinkedIn_icon.svg.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2025 D. Abhijay. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
