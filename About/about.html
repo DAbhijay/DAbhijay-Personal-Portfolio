@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | D. Abhijay</title>
+  <meta name="description" content="Learn about D. Abhijay - A developer passionate about clean code, scalable systems, and DevOps practices"/>
   <link rel="stylesheet" href="about.css" />
 </head>
 <body>
@@ -25,7 +26,7 @@
 
   <main>
 
-    <!-- Intro -->
+    <!-- About Hero -->
     <section class="about-hero">
       <div class="container about-hero-inner">
         <div class="about-text">
@@ -34,18 +35,18 @@
             <span>About Me</span>
           </div>
 
-          <h1>Developer Focused on <span class="gradient-text">Clean Code</span> & Growth</h1>
+          <h1>Building <span class="gradient-text">Scalable Systems</span> with Clean Code</h1>
 
           <p class="lead">
-            I’m a passionate developer with a strong interest in creating reliable, scalable solutions.
-            My journey began with curiosity about how things work, which led me to explore programming,
-            system design, and modern development workflows.
+            I'm a developer passionate about creating reliable, maintainable applications and learning
+            modern DevOps practices. My journey started with curiosity about how software systems work,
+            which evolved into exploring full-stack development, containerization, and deployment automation.
           </p>
 
           <p>
-            I enjoy turning ideas into dependable user experiences and writing code that’s easy to read,
-            maintain, and extend. I’m currently seeking internship or junior developer opportunities where
-            I can contribute and grow.
+            I believe great software isn't just about features—it's about building systems that are easy to
+            develop, deploy, and scale. Currently seeking internship or junior developer opportunities where
+            I can contribute to building robust infrastructure and continue growing my DevOps skill set.
           </p>
         </div>
 
@@ -60,89 +61,191 @@
 
     <!-- Work & Learning Cards -->
     <section class="about-cards alt-bg">
-    <div class="container">
+      <div class="container">
         <div class="about-card-grid">
 
-        <article class="card about-info-card">
-            <h2 class="section-title">How I Work</h2>
+          <article class="card about-info-card">
+            <div class="card-icon">⚙️</div>
+            <h2 class="card-title">Development Philosophy</h2>
             <p>
-            I believe in writing clean, efficient, and maintainable code. I follow best practices and
-            stay current with industry trends to ensure high-quality results. Collaboration and
-            continuous learning are core to how I grow and contribute.
+              I focus on writing clean, efficient code that's built to last. My approach emphasizes
+              modularity, documentation, and automation. I believe in infrastructure as code, continuous
+              integration, and building systems that are observable and maintainable from day one.
             </p>
-        </article>
+          </article>
 
-        <article class="card about-info-card">
-            <h2 class="section-title">Currently Learning</h2>
+          <article class="card about-info-card">
+            <div class="card-icon">🚀</div>
+            <h2 class="card-title">DevOps Journey</h2>
             <p>
-            I’m expanding my knowledge in modern front-end frameworks like React and Vue, while also
-            exploring backend systems with Node.js, Express, and databases such as MongoDB and SQL.
-            My goal is to grow into a well-rounded full-stack and DevOps-oriented developer.
+              Currently expanding into Docker containerization, Kubernetes orchestration, and CI/CD pipelines.
+              I'm learning how to build automated deployment workflows, implement monitoring solutions,
+              and create infrastructure that scales efficiently. My goal is to bridge development and operations seamlessly.
             </p>
-        </article>
+          </article>
 
         </div>
-    </div>
+      </div>
     </section>
 
+    <!-- Skills & Technologies -->
+    <section class="skills-section">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">
+          Technologies and tools I work with to build and deploy applications
+        </p>
+
+        <div class="skills-grid">
+          
+          <div class="skill-category">
+            <h3>
+              <span class="category-icon">💻</span>
+              Frontend Development
+            </h3>
+            <ul>
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Responsive Design</li>
+              <li>Modern CSS (Grid, Flexbox)</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <span class="category-icon">⚡</span>
+              Backend & APIs
+            </h3>
+            <ul>
+              <li>Node.js & Express</li>
+              <li>RESTful API Design</li>
+              <li>SQLite & SQL Databases</li>
+              <li>Server-side Logic</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <span class="category-icon">🛠️</span>
+              Developer Tools
+            </h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>Linux/Terminal</li>
+              <li>Version Control Workflows</li>
+            </ul>
+          </div>
+
+          <div class="skill-category learning">
+            <h3>
+              <span class="category-icon">📚</span>
+              Currently Learning
+            </h3>
+            <ul>
+              <li>Docker Containerization 🐳</li>
+              <li>Kubernetes Orchestration ☸️</li>
+              <li>CI/CD Pipelines</li>
+              <li>Infrastructure as Code</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- Resume -->
-    <section>
+    <section class="resume-section alt-bg">
       <div class="container">
         <h2 class="section-title">Resume</h2>
+        <p class="section-subtitle">
+          View my complete professional background and experience
+        </p>
 
         <div class="resume-wrapper">
-          <a href="../images/resume_full.pdf" target="_blank" class="card resume-card">
-            <h3>D. Abhijay — Resume</h3>
-            <p class="card-subtitle">Android Developer · Java Developer · Web Developer</p>
-
-            <img src="../images/resume_preview.webp" alt="Resume preview" />
-
-            <span class="card-cta">Click to open full PDF →</span>
+          <a href="../images/resume_full.pdf" target="_blank" class="resume-card">
+            <div class="resume-preview">
+              <img src="../images/resume_preview.webp" alt="Resume preview" />
+              <div class="resume-overlay">
+                <span class="resume-icon">📄</span>
+                <span class="resume-cta">View Full PDF</span>
+              </div>
+            </div>
+            
+            <div class="resume-info">
+              <h3>D. Abhijay — Resume</h3>
+              <p class="resume-subtitle">Full-Stack Developer · DevOps Enthusiast</p>
+              <div class="resume-tags">
+                <span class="tag">Web Development</span>
+                <span class="tag">Backend Systems</span>
+                <span class="tag">DevOps</span>
+              </div>
+            </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="alt-bg">
+    <!-- Certificates -->
+    <section class="certificates-section">
       <div class="container">
-        <h2 class="section-title">Skills & Tools</h2>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">
+          Professional certifications and completed courses
+        </p>
 
-        <div class="tech-grid">
-          <div class="tech-card">HTML</div>
-          <div class="tech-card">CSS</div>
-          <div class="tech-card">JavaScript</div>
-          <div class="tech-card">Git & GitHub</div>
-          <div class="tech-card">Responsive Design</div>
-          <div class="tech-card">Problem Solving</div>
+        <div class="cert-grid">
+          
+          <article class="cert-card">
+            <div class="cert-badge">
+              <span class="cert-icon">🎓</span>
+            </div>
+            
+            <div class="cert-content">
+              <h3>HTML, CSS & JavaScript</h3>
+              <p class="cert-issuer">IBM</p>
+              
+              <a href="../images/cert_ibm.pdf" target="_blank" class="cert-preview">
+                <img src="../images/cert_ibm_preview.webp" alt="IBM Certificate" />
+                <div class="cert-overlay">
+                  <span>View Certificate →</span>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <div class="cert-badge">
+              <span class="cert-icon">🎓</span>
+            </div>
+            
+            <div class="cert-content">
+              <h3>Programming Fundamentals with C</h3>
+              <p class="cert-issuer">University of Michigan</p>
+              
+              <a href="../images/cert_michigan.pdf" target="_blank" class="cert-preview">
+                <img src="../images/cert_michigan_preview.webp" alt="Michigan Certificate" />
+                <div class="cert-overlay">
+                  <span>View Certificate →</span>
+                </div>
+              </a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- Certificates -->
-    <section>
+    <!-- CTA Section -->
+    <section class="cta-section">
       <div class="container">
-        <h2 class="section-title">Certificates</h2>
-
-        <div class="cert-grid">
-          <article class="card">
-            <h3>HTML, CSS & JavaScript</h3>
-            <p class="card-subtitle">IBM</p>
-            <a href="../images/cert_ibm.pdf" target="_blank">
-              <img src="../images/cert_ibm_preview.webp" alt="IBM Certificate" />
-              <span class="card-cta">Open certificate →</span>
-            </a>
-          </article>
-
-          <article class="card">
-            <h3>Programming Fundamentals with C</h3>
-            <p class="card-subtitle">University of Michigan</p>
-            <a href="../images/cert_michigan.pdf" target="_blank">
-              <img src="../images/cert_michigan_preview.webp" alt="Michigan Certificate" />
-              <span class="card-cta">Open certificate →</span>
-            </a>
-          </article>
+        <div class="cta-content">
+          <h2>Let's Build Something Together</h2>
+          <p>
+            Interested in collaborating or discussing opportunities? I'm always open to
+            connecting with fellow developers and exploring new challenges.
+          </p>
+          <a href="../Contact/contact.html" class="btn btn-primary">Get in Touch</a>
         </div>
       </div>
     </section>
@@ -152,7 +255,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
+      <div class="footer-left">
         <p class="footer-brand">D. Abhijay</p>
         <p class="footer-tagline">Building for the web, deploying for scale</p>
       </div>
@@ -164,10 +267,10 @@
       </div>
 
       <div class="footer-social">
-        <a href="https://github.com/DAbhijay" target="_blank" class="social-link">
+        <a href="https://github.com/DAbhijay" target="_blank" aria-label="GitHub" class="social-link">
           <img src="../images/github-icon.svg" alt="GitHub" />
         </a>
-        <a href="https://www.linkedin.com/in/d-abhijay-22763a383/" target="_blank" class="social-link">
+        <a href="https://www.linkedin.com/in/d-abhijay-22763a383/" target="_blank" aria-label="LinkedIn" class="social-link">
           <img src="../images/LinkedIn_icon.svg.png" alt="LinkedIn" />
         </a>
       </div>
