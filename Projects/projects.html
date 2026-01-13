@@ -1,157 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | D. Abhijay</title>
-    <link rel="stylesheet" href="projects.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | D. Abhijay</title>
+  <meta name="description" content="Portfolio of web development projects by D. Abhijay - Full-stack applications with focus on clean code and deployment"/>
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
 
-    <!-- Header -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="../index.html" class="logo">D. Abhijay</a>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../About/about.html">About</a></li>
-            <li><a href="../Projects/projects.html">Projects</a></li>
-            <li><a href="../Contact/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">D. Abhijay</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../About/about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="../Contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="projects-page">
+  <main>
 
-      <!-- Projects Intro -->
-      <section class="projects-intro">
-        <div class="container">
-          <h1>My Projects</h1>
-          <p>
-            A collection of planned and upcoming projects focused on frontend development,
-            backend systems, and a gradual transition toward DevOps-oriented workflows.
-            Each project is designed with scalability, clarity, and real-world use in mind.
-          </p>
-        </div>
-      </section>
-
-      <!-- Projects Grid -->
-      <section class="projects-list">
-        <div class="container">
-
-          <!-- Project 1 -->
-          <article class="project-card">
-            <span class="status-badge status-planned">Planned</span>
-
-            <h2>Project Tracker | Tracklist Web</h2>
-
-            <p class="project-description">
-              A task tracking application designed to help users organize daily activities
-              and manage productivity. Planned as a full-stack project with backend services
-              and future deployment automation.
-            </p>
-
-            <ul class="project-tech">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-
-            <div class="project-links">
-              <span style="opacity: 0.5; cursor: not-allowed;">Live Demo</span>
-              <span style="opacity: 0.5; cursor: not-allowed;">Source Code</span>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card">
-            <span class="status-badge status-planned">Planned</span>
-
-            <h2>Interactive Weather Dashboard | Weather View</h2>
-
-            <p class="project-description">
-              A weather dashboard that will display real-time conditions and forecasts
-              using an external API. Planned improvements include backend data handling,
-              caching strategies, and containerized deployment.
-            </p>
-
-            <ul class="project-tech">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-
-            <div class="project-links">
-              <span style="opacity: 0.5; cursor: not-allowed;">Live Demo</span>
-              <span style="opacity: 0.5; cursor: not-allowed;">Source Code</span>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card">
-            <span class="status-badge status-planned">Planned</span>
-
-            <h2>Landing Page + Interactive Form Flow</h2>
-
-            <p class="project-description">
-              A modern landing page concept with an interactive form flow.
-              Planned to include backend form handling, validation, and deployment
-              using CI/CD pipelines.
-            </p>
-
-            <ul class="project-tech">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-
-            <div class="project-links">
-              <span style="opacity: 0.5; cursor: not-allowed;">Live Demo</span>
-              <span style="opacity: 0.5; cursor: not-allowed;">Source Code</span>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-    </main>
-
-    <!-- CTA -->
-    <section class="project-cta">
+    <!-- Projects Intro -->
+    <section class="projects-hero">
       <div class="container">
-        <h2>Interested in collaborating or just want to ask a question?</h2>
-        <a href="../Contact/contact.html" class="btn btn-secondary">Get in Touch</a>
+        <div class="hero-badge">
+          <span class="badge-icon">🚀</span>
+          <span>My Work</span>
+        </div>
+
+        <h1>Projects & <span class="gradient-text">Implementations</span></h1>
+        
+        <p class="hero-description">
+          A collection of full-stack applications and development projects focused on clean architecture,
+          scalable systems, and modern deployment practices. Each project demonstrates practical skills
+          in web development and DevOps workflows.
+        </p>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© 2025 D. Abhijay. All rights reserved.</p>
+    <!-- Projects Grid -->
+    <section class="projects-section">
+      <div class="container">
 
-        <div class="footer-social">
-          <span class="social-label">Social Links:</span>
-          <ul class="social-links">
-            <li>
-              <a href="https://github.com/DAbhijay" target="_blank" aria-label="GitHub">
-                <img src="../images/github-icon.svg" alt="GitHub" />
+        <!-- Featured Project - Tracklist -->
+        <article class="project-card featured">
+          <div class="project-image-placeholder">
+            <div class="project-icon">📋</div>
+            <span class="live-badge">Live Demo</span>
+          </div>
+
+          <div class="project-content">
+            <header class="project-header">
+              <h2>Tracklist Web</h2>
+              <span class="status-badge status-completed">Completed</span>
+            </header>
+
+            <p class="project-description">
+              A full-stack task and grocery management application built with Node.js, Express, and SQLite.
+              Features RESTful API architecture, persistent data storage, real-time updates, and a clean,
+              responsive interface. Deployed on Render with automated deployment workflows.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <span>RESTful API Design</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🗄️</span>
+                <span>SQLite Database</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">📱</span>
+                <span>Responsive UI</span>
+              </div>
+            </div>
+
+            <ul class="project-tech">
+              <li>HTML/CSS/JS</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>SQLite</li>
+              <li>REST API</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="https://tracklist-web-project.onrender.com/tracklist.html" target="_blank" class="project-link primary">
+                <span>Live Demo</span>
+                <span class="link-icon">→</span>
               </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/d-abhijay-22763a383/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <img src="../images/LinkedIn_icon.svg.png" alt="LinkedIn" />
+              <a href="https://github.com/DAbhijay/Tracklist-Web-Project" target="_blank" class="project-link secondary">
+                <span>View Code</span>
+                <span class="link-icon">→</span>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Regular Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Weather Dashboard -->
+          <article class="project-card">
+            <div class="project-image-placeholder">
+              <div class="project-icon">🌤️</div>
+            </div>
+
+            <div class="project-content">
+              <header class="project-header">
+                <h3>Weather Dashboard</h3>
+                <span class="status-badge status-planned">Planned</span>
+              </header>
+
+              <p class="project-description">
+                Real-time weather application with API integration, backend caching for performance,
+                and containerized deployment using Docker. Will feature location-based forecasts
+                and historical weather data visualization.
+              </p>
+
+              <ul class="project-tech">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Weather API</li>
+                <li>Docker</li>
+                <li>Redis</li>
+              </ul>
+
+              <div class="project-links">
+                <span class="project-link disabled">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Portfolio CMS -->
+          <article class="project-card">
+            <div class="project-image-placeholder">
+              <div class="project-icon">📝</div>
+            </div>
+
+            <div class="project-content">
+              <header class="project-header">
+                <h3>Portfolio CMS</h3>
+                <span class="status-badge status-planned">Planned</span>
+              </header>
+
+              <p class="project-description">
+                Content management system for developer portfolios with automated deployment via
+                CI/CD pipelines. Features include project management, blog posts, and containerized
+                infrastructure for easy scaling.
+              </p>
+
+              <ul class="project-tech">
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>Docker</li>
+                <li>GitHub Actions</li>
+                <li>Nginx</li>
+              </ul>
+
+              <div class="project-links">
+                <span class="project-link disabled">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- DevOps Learning Lab -->
+          <article class="project-card">
+            <div class="project-image-placeholder">
+              <div class="project-icon">🛠️</div>
+            </div>
+
+            <div class="project-content">
+              <header class="project-header">
+                <h3>DevOps Learning Lab</h3>
+                <span class="status-badge status-planned">Planned</span>
+              </header>
+
+              <p class="project-description">
+                Personal lab environment for experimenting with DevOps tools and practices.
+                Includes Docker compose setups, Kubernetes configurations, and CI/CD pipeline
+                templates for various deployment scenarios.
+              </p>
+
+              <ul class="project-tech">
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Jenkins</li>
+                <li>Terraform</li>
+                <li>Ansible</li>
+              </ul>
+
+              <div class="project-links">
+                <span class="project-link disabled">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Showcase -->
+    <section class="skills-showcase alt-bg">
+      <div class="container">
+        <h2 class="section-title">Development Stack</h2>
+        <p class="section-subtitle">
+          Technologies and tools used across my projects
+        </p>
+
+        <div class="stack-grid">
+          
+          <div class="stack-category">
+            <h3>Frontend</h3>
+            <div class="stack-items">
+              <span class="stack-item">HTML5</span>
+              <span class="stack-item">CSS3</span>
+              <span class="stack-item">JavaScript</span>
+              <span class="stack-item">React</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h3>Backend</h3>
+            <div class="stack-items">
+              <span class="stack-item">Node.js</span>
+              <span class="stack-item">Express</span>
+              <span class="stack-item">SQLite</span>
+              <span class="stack-item">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h3>DevOps & Tools</h3>
+            <div class="stack-items">
+              <span class="stack-item">Git</span>
+              <span class="stack-item">Docker 🐳</span>
+              <span class="stack-item">CI/CD</span>
+              <span class="stack-item">Linux</span>
+            </div>
+          </div>
+
         </div>
       </div>
-    </footer>
+    </section>
 
-  </body>
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Interested in Collaborating?</h2>
+          <p>
+            I'm always excited to work on new projects and connect with fellow developers.
+            Have a project idea or opportunity? Let's discuss how we can work together.
+          </p>
+          <a href="../Contact/contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-brand">D. Abhijay</p>
+        <p class="footer-tagline">Building for the web, deploying for scale</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="../About/about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="../Contact/contact.html">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com/DAbhijay" target="_blank" aria-label="GitHub" class="social-link">
+          <img src="../images/github-icon.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/d-abhijay-22763a383/" target="_blank" aria-label="LinkedIn" class="social-link">
+          <img src="../images/LinkedIn_icon.svg.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2025 D. Abhijay. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
 </html>

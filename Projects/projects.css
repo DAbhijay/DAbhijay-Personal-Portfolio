@@ -2,7 +2,6 @@
     CSS Reset
 ======================= */
 
-
 *,
 *::before,
 *::after {
@@ -11,10 +10,10 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: #e5e7eb;
-  background-color: #0f1115;
+  color: #e2e8f0;
+  background-color: #0a0e17;
 }
 
 img {
@@ -23,22 +22,36 @@ img {
 }
 
 /* =======================
-    Variables
+    Variables - DevOps Theme
 ======================= */
 
 :root {
-  --max-width: 1100px;
+  --max-width: 1200px;
   --spacing: 1rem;
 
-  --color-primary: #f1f5f9;
-  --color-secondary: #9ca3af;
-  --color-accent: #242020;
-  --color-project-link: #60a5fa;
-  --color-neon: #3b82f6;
-
-  --border-radius: 6px;
+  --color-primary: #f8fafc;
+  --color-secondary: #94a3b8;
+  --color-accent: #06b6d4;
+  --color-accent-dark: #0891b2;
+  --color-accent-light: #22d3ee;
+  
+  --color-bg-primary: #0a0e17;
+  --color-bg-secondary: #111827;
+  --color-bg-card: #1e293b;
+  
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-planned: #6366f1;
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.3);
 }
-
 
 /* =======================
     Global Layout
@@ -51,7 +64,28 @@ img {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 5rem 0;
+}
+
+.alt-bg {
+  background: var(--color-bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-secondary);
+  max-width: 600px;
+  margin-bottom: 3rem;
 }
 
 /* =======================
@@ -59,26 +93,37 @@ section {
 ======================= */
 
 .site-header {
-  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  background: rgba(10, 14, 23, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.25rem 0;
 }
 
 .logo {
   font-weight: 700;
+  font-size: 1.25rem;
   text-decoration: none;
-  color: var(--color-primary);;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--color-accent);
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
@@ -86,304 +131,447 @@ section {
 .main-nav a {
   text-decoration: none;
   color: var(--color-secondary);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
-.main-nac a[aria-current="page"] {
-  font-weight: 600;
-  color: var(--color-primary);
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+.main-nav a[aria-current="page"]::after {
+  width: 100%;
 }
 
 /* =======================
-    Footer CSS
+    Projects Hero CSS
 ======================= */
 
-.site-footer {
-  border-top: 1px solid #e5e5e5;
-  padding: 2rem 0;
+.projects-hero {
+  padding: 8rem 0 6rem;
+  background: 
+    radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgba(6, 182, 212, 0.15),
+      transparent
+    );
+  position: relative;
+  overflow: hidden;
 }
 
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+.projects-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1), transparent 50%);
+  pointer-events: none;
 }
 
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+.projects-hero .container {
+  position: relative;
+  max-width: 800px;
 }
 
-
-/* =======================
-    Social Links CSS
-======================= */
-
-.social-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0;
-  margin: 0;
-}
-.social-links img {
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-
-.social-links img[alt="GitHub"] {
-  filter: invert(1) brightness(1.2);
-}
-
-.social-links img[alt="GitHub"]:hover {
-  filter: invert(1) brightness(1.4);
-  transform: scale(1.05);
-}
-
-
-.social-links a:hover img {
-  opacity: 0.75;
-}
-.social-links a {
+.hero-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-
-  width: 40px;
-  height: 40px;
-
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--color-secondary);
-
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: var(--color-accent-light);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
-/* =======================
-   Projects Page CSS
-======================= */
-
-.projects-page section {
-  padding: 4rem 0;
+.badge-icon {
+  font-size: 1.125rem;
 }
 
-.projects-page section + section {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* =======================
-   Intro Section CSS
-======================= */
-
-.projects-intro h1 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  margin-bottom: 1rem;
+.projects-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
   color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
-.projects-intro p {
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-secondary);
   max-width: 700px;
-  font-size: 1.05rem;
+}
+
+/* =======================
+    Projects Section CSS
+======================= */
+
+.projects-section {
+  padding: 5rem 0;
+}
+
+/* Featured Project Card */
+.project-card.featured {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  margin-bottom: 4rem;
+  transition: all 0.3s ease;
+}
+
+.project-card.featured:hover {
+  transform: translateY(-6px);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Project Image Placeholder */
+.project-image-placeholder {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: var(--border-radius-sm);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-icon {
+  font-size: 5rem;
+  opacity: 0.5;
+}
+
+.live-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.375rem 0.75rem;
+  background: rgba(16, 185, 129, 0.9);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Project Content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-card.featured h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: 700;
+}
+
+.project-card h3 {
+  font-size: 1.375rem;
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Status Badges */
+.status-badge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.status-completed {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.status-planned {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--color-planned);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.status-progress {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+/* Project Description */
+.project-description {
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--color-secondary);
 }
 
-/* =======================
-   Projects Grid
-======================= */
-
-.projects-list .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-/* =======================
-   Project Card CSS
-======================= */
-
-.project-card {
-  position: relative;
-  padding: 1.75rem;
-  border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
+/* Project Highlights */
+.project-highlights {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(59, 130, 246, 0.45);
-  box-shadow:
-    0 0 0 1px rgba(59, 130, 246, 0.2),
-    0 14px 30px rgba(0, 0, 0, 0.55);
-}
-
-/* Header */
-.project-card h2 {
-  font-size: 1.25rem;
-  color: var(--color-primary);
-}
-
-/* =======================
-   Status Badges
-======================= */
-
-.status-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-
-  font-size: 0.7rem;
-  font-weight: 500;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid transparent;
-  backdrop-filter: blur(6px);
-  white-space: nowrap;
-}
-
-/* Planned */
-.status-planned {
-  color: #5da9ff;
-  border-color: rgba(93, 169, 255, 0.35);
-  box-shadow: 0 0 8px rgba(93, 169, 255, 0.15);
-}
-
-/* In Progress */
-.status-progress {
-  color: #facc15;
-  border-color: rgba(250, 204, 21, 0.35);
-  box-shadow: 0 0 8px rgba(250, 204, 21, 0.15);
-}
-
-/* Completed */
-.status-completed {
-  color: #22c55e;
-  border-color: rgba(34, 197, 94, 0.35);
-  box-shadow: 0 0 8px rgba(34, 197, 94, 0.15);
-}
-
-/* Refactoring */
-.status-refactor {
-  color: #a78bfa;
-  border-color: rgba(167, 139, 250, 0.35);
-  box-shadow: 0 0 8px rgba(167, 139, 250, 0.15);
-}
-
-/* Badge reacts subtly on hover */
-.project-card:hover .status-badge {
-  box-shadow: 0 0 12px currentColor;
-}
-
-/* =======================
-   Project Description
-======================= */
-
-.project-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
   color: var(--color-secondary);
 }
 
-/* =======================
-   Tech Stack List
-======================= */
+.highlight-icon {
+  font-size: 1.25rem;
+}
 
+/* Tech Stack */
 .project-tech {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0;
-  margin: 0.5rem 0 0;
+  margin: 0;
 }
 
 .project-tech li {
-  font-size: 0.8rem;
-  padding: 0.35rem 0.6rem;
+  font-size: 0.8125rem;
+  padding: 0.375rem 0.75rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--color-primary);
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--color-accent-light);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  font-weight: 500;
 }
 
-/* =======================
-   Project Links CSS
-======================= */
-
+/* Project Links */
 .project-links {
-  margin-top: auto;
   display: flex;
   gap: 1rem;
+  margin-top: auto;
+  flex-wrap: wrap;
 }
 
-.project-links a {
-  font-size: 0.9rem;
-  font-weight: 500;
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
   text-decoration: none;
-  color: var(--color-project-link);
+  transition: all 0.3s ease;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.project-link.primary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.project-link.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+}
+
+.project-link.secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.project-link.secondary:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.project-link.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: var(--color-secondary);
+}
+
+.link-icon {
+  font-size: 1.125rem;
+}
+
+/* Regular Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+/* =======================
+    Skills Showcase CSS
+======================= */
+
+.skills-showcase {
+  padding: 5rem 0;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stack-category {
+  padding: 1.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.stack-category:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stack-category h3 {
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  margin: 0 0 1.25rem 0;
+  font-weight: 600;
   position: relative;
+  padding-bottom: 0.75rem;
 }
 
-.project-links a::after {
-  content: "";
+.stack-category h3::after {
+  content: '';
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 1px;
-  background-color: currentColor;
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  width: 30px;
+  height: 2px;
+  background: var(--color-accent);
+  opacity: 0.5;
 }
 
-.project-links a:hover::after {
-  opacity: 1;
+.stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
+.stack-item {
+  font-size: 0.8125rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--color-accent-light);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  font-weight: 500;
+}
 
 /* =======================
-    CTA Section
+    CTA Section CSS
 ======================= */
 
-.projects-cta {
+.cta-section {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cta-content {
   text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.projects-cta p {
-  margin-bottom: 1.25rem;
-  font-size: 1rem;
-  color: var(--color-secondary);;
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-
-/* =======================
-    Rexponsive
-======================= */
-
-@media ( max-width: 600px) {
-  .projects-page section {
-    padding: 3rem 0;
-  }
-
-  .projects.intro h1 {
-    font-size: 2rem;
-  }
+.cta-content p {
+  font-size: 1.125rem;
+  color: var(--color-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.7;
 }
 
 /* =======================
@@ -391,54 +579,164 @@ section {
 ======================= */
 
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
   font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
-  border-radius: 10px;
-  position: relative;
-  z-index: 0;
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
   cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
 }
 
-.btn-secondary {
-  background: transparent;
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
 }
 
-.btn-secondary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--color-accent);
-  border-radius: 10px;
-  z-index: -1;
+/* =======================
+    Footer CSS
+======================= */
+
+.site-footer {
+  background: var(--color-bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 1.5rem;
 }
 
-.btn-secondary::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  border-radius: 12px;
-
-  background: var(--color-neon);
-  filter: blur(12px);
-  opacity: 0;
-  z-index: -2;
-
-  transition: opacity 0.3s ease, filter 0.3s ease;
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 3rem;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
-
-.btn-secondary:hover::before {
-  opacity: 0.9;
-  filter: blur(18px);
+.footer-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.25rem 0;
 }
 
+.footer-tagline {
+  font-size: 0.875rem;
+  color: var(--color-secondary);
+  margin: 0;
+}
 
-.btn-secondary:hover {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0.8);
+}
+
+.social-link img[alt="GitHub"] {
+  filter: invert(1) brightness(1.2);
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* =======================
+    Responsive CSS
+======================= */
+
+@media (max-width: 968px) {
+  .project-card.featured {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 3rem 0;
+  }
+
+  .projects-hero {
+    padding: 5rem 0 3rem;
+  }
+
+  .projects-hero h1 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
 }
